@@ -1,0 +1,23 @@
+print("Starting Code Challenge")
+
+try:
+    user_input = int(input("Enter an integer number from 0 to 9: "))
+    print(user_input)
+except ValueError:
+    print("Invalid input!")
+    user_input = None
+
+if user_input is not None:
+    print("Starting While Loop - Comparing User & Count Variable")
+    count = 0
+    while count <= 10:
+        if user_input == count:
+            print("The User variable is equal to the count variable.")
+            print(f"User = {user_input}")
+            print(f"Count = {count}")
+        else:
+            print(count)
+        count += 1
+
+    print("Starting While Loop End")
+    print("Code Challenge")
