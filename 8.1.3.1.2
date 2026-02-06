@@ -1,0 +1,30 @@
+def convert_currency(amount, rate):
+    """Calculates the converted amount based on a rate."""
+    return amount * rate
+
+def main():
+    print("--- 2026 USD Currency Converter ---")
+    
+    # Use input() so you can change the amount every time you run it
+    try:
+        user_input = input("Enter the amount in US Dollars (e.g., 10 or 150.50): $")
+        usd_amount = float(user_input)
+        
+        # Real-time rates for February 6, 2026
+        to_cad_rate = 1.3637  # 1 USD = 1.3637 CAD
+        to_twd_rate = 31.6275 # 1 USD = 31.6275 TWD
+        
+        # Perform conversions
+        canadian_dollars = convert_currency(usd_amount, to_cad_rate)
+        taiwan_dollars = convert_currency(usd_amount, to_twd_rate)
+        
+        # Display results
+        print(f"\n--- Results for ${usd_amount:,.2f} USD ---")
+        print(f"Canadian Dollars (CAD): ${canadian_dollars:,.2f}")
+        print(f"New Taipei Dollars (TWD): ${taiwan_dollars:,.2f}")
+        
+    except ValueError:
+        print("Error: Please enter a valid number (no letters or symbols).")
+
+if __name__ == "__main__":
+    main()
